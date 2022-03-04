@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing elements on the DOM with javascript</title>
+    <style>
+        html {font-family: san-serif; color: #333;}
+        body {max-width: 500px; margin: 0 auto; padding: 0 15px}
+        div,article {padding: 10px; margin: 5px; border: 1px solid #dedede;}
+    </style>
+</head>
+<body>
+   <h1>Accessing elements in the DOM</h1> 
+   <h2>ID (#Demo)</h2>
+   <div id="demo">Access by id</div> 
+   <h2>class(.Demo)</h2>
+   <div class="demo">Access me by class(1)</div>
+   <div class="demo">Acessing me by class (2)</div>
+
+   <h2>Tag(Article)</h2>
+   <article>Acessing me by Tag(1)</article>
+   <article>Acessing me by Tag(2)</article>
+
+   <h3>Query selector</h3>
+   <div id="demo-query">Access me by query selector all</div>
+
+   <h3>Query selector all</h3>
+   <div class="demo-query-selector">Access me by query selector all(1)</div>
+   <div class="demo-query-selector">Access me by query selector all(2)</div>
+   <!--placed at the end of the body and in the head-->
+   <script>
+       const demoId = document.getElementById('demo')
+       demoId.style.border= '4px solid orange';
+       let demoClass = document.getElementsByClassName('demo')
+       //democlass.style.border = '3px solid blue';
+       console.log(demoClass)
+       for (i=0; i<demoClass.length; i++){
+           demoClass[i].style.border = '3px solid blue';
+       }
+    2
+       demoClass[0].style.border = '3px solid #f5f5f5';
+       demoClass[1].style.border = '3px solid black'
+        let demoTag = document.getElementsByTagName('article')
+        for(i=0; i<demoTag.length; i++){
+            demoTag[i].style.border = '3px solid red';
+        }
+        let demoquery = document.querySelector('#demo-query')
+        demoquery.style.border = '3px solid grey'
+
+        let demoqueryall = document.querySelectorAll('.demo-query-selector')
+        for(i=0; i<demoqueryall.length; i++){
+            demoqueryall[i].style.border = '3px solid brown'
+        }
+       
+   </script>
+
+</body>
+</html>

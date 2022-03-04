@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing elements on the DOM with javascript</title>
+    <style>
+        html {font-family: san-serif; color: #333;}
+        body {max-width: 500px; margin: 0 auto; padding: 0 15px}
+        div,article {padding: 10px; margin: 5px; border: 1px solid #dedede;}
+    </style>
+</head>
+<body>
+   <button onclick="changeMe()">clickme</button>
+   <p>Try to change me</p>
+
+   <button id="pop">click me Rodney</button>
+   <div id="opp">l am rodney</div>
+
+   <h3>Query selector all</h3>
+   <div class="demo-query-selector">Access me by query selector all(1)</div>
+   <div class="demo-query-selector">Access me by query selector all(2)</div>
+   <!--placed at the end of the body and in the head-->
+   <script>
+function changeMe(){
+    let p = document.querySelector('p')
+    p.textContent = 'I have changed because of in line event handler'
+    p.style.border = '3px solid blue'
+}
+function changeMe2(){
+    let k = document.getElementById ('pop')
+    k.textContent = 'change because of event handler'
+}
+       
+   </script>
+
+</body>
+</html>
