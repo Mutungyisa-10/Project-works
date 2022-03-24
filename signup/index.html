@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="regform"><h1>Signup</h1></div>
+    <div class="main" onload=" ffocus()">
+        <form>
+            <div id="name">
+                <h2>Name</h2>
+                <input class="firstname" type="text" name="userid" size="10" onblur="useridvalidate(3, 10)">
+                <label for="uerid" class="firstlabel">first name</label>
+                <input class="lastname" type="text" size="12" name="usid" onblur="uidvalidate(4, 12)">
+                <label for="usid" class="lastlabel">last name</label>
+            </div>
+            
+            <h2 for="email" class="name">Email</h2>
+            <input class="email" type="text" name="email" size="30" onblur="emailvalidate()">
+
+            <h2 class="name">Address</h2>
+            <input class="company" type="text" name="company">
+            
+            <h2 class="name">NIN NUMBER</h2>
+            <input class="email" type="text" name="NIN NUMBER">
+
+            <h2 class="name">PASSWORD</h2>
+            <input class="code" type="password" name=" area_code">
+            <label class="area-code">Password</label>
+            <input class="number" type="password" name="Password">
+            <label class="phone-number">confirm Password</label>
+
+            <h2 class="name">Country</h2>
+            <select class="option" name="subject">
+                <option disabled="disabled" selected="selected">--choose option</option>
+                <option>Uganda</option>
+                <option>Kenya</option>
+                <option>Tanzania</option>
+                <option>USA</option>
+                <option>Rwanda</option>
+                <option>Ukraine</option>
+            </select>
+            <label class="radio">
+              <h2 class="gender">Gender</h2>
+                <input class="radio-one" type="radio" checked="checked" name="gender">
+                <span class="checkmark">Male</span><br>
+                <input class="radio-one" type="radio" checked="checked" name="gender">
+                <span class="checkmark">Female</span>
+            <script src="signup.js">
+
+            </script>
+            <a href="../dashboard/dash.html"><button class="primary" type="submit">Submit</button></a>
+            <button class="cancel" type="submit">Leave</button>
+       </form>
+       </div> 
+</body>
+</html>

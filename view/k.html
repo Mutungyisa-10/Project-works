@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    landing{
+        background-color: transparent;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: 230px;
+    }
+    .title{
+        background-color: coral;
+        text-align:center;
+        color:black;
+        border-radius: 10px;
+        position:relative;
+        right: ;
+        width: ;
+        font: bold;
+    }
+    #black{
+        padding: 10px 40px;
+    }
+    .continue{
+        background-color: blue;
+        display: block;
+        position:relative;
+        left:400px;
+        top:20px;
+        margin: 4px 9px;
+        text-align: center;
+        border-radius: 12px;
+        border: 2px solid brown;
+        padding:4px 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        outline:none;
+        color: floralwhite;
+        font:bold;
+        font-size: 27px;
+        cursor: pointer;
+        transition: 0.5px;
+    }
+    .continue:hover{
+        background-color: lawngreen;
+        color:darkviolet;
+        box-shadow: 3px 3px 10px solid rgb(43, 226, 202);
+    }
+    .cancel{
+        background-color:red;
+        position: relative;
+        left: 600px;
+        top: -26px;
+        display: block;
+        margin: 4px 9px;
+        text-align: right;
+        border-radius: 12px;
+        border: 2px solid gold;
+        padding: 4px 10px;
+        outline:none;
+        color:wheat;
+        font:bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 27px;
+        cursor: pointer;
+        transition: 0.5px;
+    }
+    .cancel:hover{
+        background-color: mediumvioletred;
+        color:black
+    }
+    
+</body>
+</html>
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.main{
+    padding-top: 120px;
+}
+
+.cards {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    background-color: #db2777;
+    margin: 1.2rem;
+}
+
+.card p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} 
+.button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: beige;
+    border: 1px solid black;
+    padding:5px;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: black;
+    color:white;
+    transition: .5s;
+    cursor:pointer;
+}
+
+const uidvalidate = (min, max) =>{
+    let uid = document.signup.uid;
+    var uidLen = uid.value.length;
+    if(uidLen == 0 || uidLen >= max || uidLen < min){
+        alert('last name shouldnot be empty/length be btn' + min + 'to' + max)
+        uid.focus()
+        return false;
+    }
+    document.signup.email.focus();
+    return true;
+}
+const emailvalidate = (min, max) =>{
+    let email = document.signup.email
+    let comp = /^[0-9a-zA-z]+$/
+    if(address.value.match(comp)){
+        document.signup.password.focus();
+        return true
+    }
+    else{
+       alert('use alphanumeric characters')
+       email.focus()
+       return false
+    }
+}
